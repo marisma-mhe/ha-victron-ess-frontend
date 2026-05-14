@@ -4,6 +4,16 @@ Blueprints and Lovelace dashboard views for Victron Energy ESS systems in Home A
 
 > **Part of the Victron ESS Control suite.** The matching integration (helpers, template sensors, guided setup wizard) lives in [ha-victron-ess-control](https://github.com/marisma-mhe/ha-victron-ess-control). Install that first.
 
+## Background
+
+The Victron ESS out of the box offers limited flexibility for dynamic feed-in and charging control. This suite was built to fill that gap — see [ha-victron-ess-control](https://github.com/marisma-mhe/ha-victron-ess-control#background) for the full background and the installation it was developed on.
+
+In short: the blueprints here implement dynamic grid feed-in (voltage-curve based, starts early in the day when grid voltage is low), smart overnight charging (SOC target from solar forecast, latest viable start time), and storm mode (battery protection before bad weather). The result on the reference installation is a near-zero electricity bill with a fully automated system.
+
+<img src="docs/IMG_3159.jpg" width="380" alt="Single-phase MultiPlus + MPPT chargers + Boxion batteries (grid side)">
+<img src="docs/IMG_3160.jpg" width="380" alt="Three-phase MultiPlus setup + Boxion batteries (house side)">
+<img src="docs/IMG_3161.jpg" width="380" alt="Cerbo GX, distribution panel, and inverter rack">
+
 ## Contents
 
 ### Blueprints (`blueprints/automation/victron/`)
