@@ -12,8 +12,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4.2.2
 
-      - name: Install PyYAML
-        run: pip install pyyaml
+      - name: Install dependencies
+        run: pip install -r requirements_test.txt
 
       - name: Run dashboard YAML tests
         run: python -m pytest tests/ -v
