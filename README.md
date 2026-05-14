@@ -35,6 +35,7 @@ Blueprints and Lovelace dashboard views for Victron Energy ESS systems in Home A
 ## Requirements
 
 - **[ha-victron-ess-control](https://github.com/marisma-mhe/ha-victron-ess-control)** — provides all helpers and template sensors the blueprints depend on
+- **HA MQTT Integration** — must be configured and connected to the same broker as the Victron GX device
 - **[ha-victron-mqtt](https://github.com/tomer-w/ha-victron-mqtt)** (HACS) — Victron data source
 - **Home Assistant 2024.6+**
 
