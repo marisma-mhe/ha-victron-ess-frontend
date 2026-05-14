@@ -1,8 +1,8 @@
-# ha-victron-ess-frontend
+# ha-victron-ess-frontend — DEPRECATED
 
-Lovelace dashboard views for Victron Energy ESS systems in Home Assistant.
-
-> **Blueprints and the integration are in [ha-victron-ess-control](https://github.com/marisma-mhe/ha-victron-ess-control) — install that first.**
+> **This repository is no longer maintained.**
+>
+> Dashboard views have been merged into **[ha-victron-ess-control](https://github.com/marisma-mhe/ha-victron-ess-control)** and are deployed automatically on setup. Install that integration instead.
 
 ## Dashboard Views
 
