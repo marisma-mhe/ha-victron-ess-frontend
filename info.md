@@ -1,25 +1,19 @@
-Automation blueprints and Lovelace dashboard views for Victron Energy ESS systems in Home Assistant.
+Lovelace dashboard views for Victron Energy ESS systems in Home Assistant.
 
-> Install **[ha-victron-ess-control](https://github.com/marisma-mhe/ha-victron-ess-control)** first — it provides all helpers and sensors the blueprints depend on.
-
-## Blueprints included
-
-| Blueprint | Purpose |
-|---|---|
-| `victron_mqtt_keepalive` | Keeps VenusOS MQTT publishing active |
-| `victron_daytime_feed_in_control` | Dynamic grid feed-in via `AcPowerSetPoint` |
-| `victron_max_feed_in_power_control` | Voltage-curve based export cap |
-| `victron_smart_overnight_charging` | SOC target from solar forecast, latest viable charge window |
-| `victron_pre_midnight_charging_decision` | Decides whether to start charging before midnight |
-| `victron_storm_mode_auto_control` | Auto-enables storm mode from rain/forecast |
-| `victron_storm_forecast_fetch` | Fetches precipitation data from any `weather.*` entity |
+> Install **[ha-victron-ess-control](https://github.com/marisma-mhe/ha-victron-ess-control)** first — it provides all helpers, sensors, and automation blueprints.
 
 ## Dashboard views
 
-5 Lovelace YAML panels: feed-in control, max feed-in, overnight charging, storm mode, system overview.
+| File | Content |
+|---|---|
+| `feed_in_control_center.yaml` | Feed-in control panel — SOC, solar forecast, override controls |
+| `max_feed_in_control_center.yaml` | Max feed-in power curve configuration |
+| `overnight_charging_control_center.yaml` | Overnight charge window and SOC targets |
+| `storm_mode_control_center.yaml` | Storm mode status and thresholds |
+| `victron_overview_values.yaml` | System overview — battery, grid, solar, consumption |
 
 ## Requirements
 
-- **[ha-victron-ess-control](https://github.com/marisma-mhe/ha-victron-ess-control)** (this suite's companion integration)
+- **[ha-victron-ess-control](https://github.com/marisma-mhe/ha-victron-ess-control)** (provides helpers, sensors, and blueprints)
 - **[ha-victron-mqtt](https://github.com/tomer-w/ha-victron-mqtt)** (HACS)
 - **Home Assistant 2024.6+**
